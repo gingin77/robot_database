@@ -8,23 +8,21 @@
  		<meta name="author" content=" " />
  		<meta name="HandheldFriendly" content="true" />
  		<meta name="MobileOptimized" content="320" />
- 		<!-- Use maximum-scale and user-scalable at your own risk. It disables pinch/zoom. Think about usability/accessibility before including.-->
  		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
- 		<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <link rel="stylesheet" type="text/css" href="/style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
  	</head>
  	<body>
-    <div class="grey_frame">
-      {{#users}}
-        <img src="{{avatar}}">
-        <h2>{{name}}</h2>
-        {{#job}}
-        <h3>{{job}}, {{company}}</h3>
-        {{/job}}
-        {{^job}}
-        <h3 class="available">Available for hire</h3>
-        {{/job}}
-      {{/users}}
+    <h1>Index</h1>
+    <div class="wrapper">
+          {{#users}}
+            <div class="grey_frame">
+                <img class="image" src="{{avatar}}">
+                <h2><a href="/index/{{id}}">{{name}}</h2></a>
+                {{#job}}<h3>{{job}}, {{company}}</h3>{{/job}}
+                {{^job}}<h3 class="available">Available for hire</h3>{{/job}}
+            </div>
+          {{/users}}
     </div>
  	</body>
  </html>
