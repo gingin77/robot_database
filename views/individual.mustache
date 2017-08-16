@@ -11,10 +11,28 @@
  		<!-- Use maximum-scale and user-scalable at your own risk. It disables pinch/zoom. Think about usability/accessibility before including.-->
  		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
  		<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
- 		<link rel="stylesheet" type="text/css" href=" ">
+    <link rel="stylesheet" type="text/css" href="/style.css" />
  	</head>
  	<body>
- 		<h1>Hi, I"m a robot named.... {{name}}</h1>
- 		<p>Go ahead and add your content!</p>
+    <div class="display_top">
+      <img src="{{avatar}}" />
+      <div>
+        <h1>{{name}}</h1>
+        <span>{{address.city}}, {{address.country}}</span>
+        <span>{{email}} | {{phone}}</span>
+      </div>
+
+    </div>
+    <div class "display_lower">
+      <h3>Eduction</h3><span>{{university}}</span>
+      <h3>Skills</h3>
+      <span>
+        {{#skills}}
+        {{.}}<br />
+        {{/skills}}
+      </span>
+    </div>
+
+
  	</body>
  </html>
