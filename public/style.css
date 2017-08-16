@@ -2,6 +2,19 @@ body{
   font-family: 'Roboto', sans-serif;
 }
 
+h1{
+  text-align: left;
+  margin: 40px;
+}
+
+h2{
+  font-size: xx-large;
+}
+
+span, p{
+  font-size: larger;
+}
+
 .wrapper{
   display: flex;
   flex-wrap: wrap;
@@ -14,7 +27,7 @@ body{
   padding: 2%;
   border: 2px solid grey;
   width: 18%;
-  margin: 2px;
+  margin: 10px;
 }
 
 image{
@@ -28,4 +41,43 @@ a{
 }
 .available{
   color: red;
+}
+
+.display_top{
+  display: flex;
+  flex-direction: row;
+  margin-right: 10px;
+}
+
+.round_frame{
+  border-radius: 50%;
+  border: 1px solid #E7E7E7;
+  padding: 2px;
+  margin: 3px 10px;
+}
+
+.top_text{
+  margin-left: 10px;
+}
+
+.row{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.bold-right-align{
+  align-items: flex-start;
+  align-items: ;
+  width: 163px;
+  text-align: right;
+}
+
+.spacer{
+  width: 20px;
+}
+.left-align{
+  width: 500px;
+  text-align: left;
+
 }

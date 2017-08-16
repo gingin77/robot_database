@@ -15,22 +15,33 @@
  	</head>
  	<body>
     <div class="display_top">
-      <img src="{{avatar}}" />
-      <div>
-        <h1>{{name}}</h1>
-        <span>{{address.city}}, {{address.country}}</span>
-        <span>{{email}} | {{phone}}</span>
+      <img class="round_frame" src="{{avatar}}" />
+      <div class="top_text">
+        <h2>{{name}}</h2>
+        {{#address}}
+        <span>{{#address.city}}{{address.city}}, {{/address.city}}{{address.country}}</span> |
+        {{/address}}{{#job}}<span>{{job}}, {{company}}</span>{{/job}}
+        {{^job}}<span class="available">Available for hire</span>{{/job}}
+        <p>{{email}} | {{phone}}</p>
+      </div>
+    </div>
+
+    <div class="display_lower">
+      <div class="row">
+        {{#university}}
+        <h3 class="bold-right-align">Education</h3><span class="spacer"></span><span class="left-align">{{university}}</span>
+        {{/university}}
+      </div>
+      <div class="row">
+        <h3 class="bold-right-align">Skills</h3>
+        <span class="spacer"></span>
+        <span class="left-align">
+          {{#skills}}
+          {{.}}<br />
+          {{/skills}}
+        </span>
       </div>
 
-    </div>
-    <div class "display_lower">
-      <h3>Eduction</h3><span>{{university}}</span>
-      <h3>Skills</h3>
-      <span>
-        {{#skills}}
-        {{.}}<br />
-        {{/skills}}
-      </span>
     </div>
 
 
